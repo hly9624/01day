@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>日期</title>
+  </head>
+  <body>
+    年:<input type="text" id="year">
+    月:<input type="text" id="mon">
+    日:<input type="text" id="day">
+    <button id="btn">点击查询第几天</button>
+    <h1>这是<span id="years"></span>年第<span id="days"></span>天</h1>
+    <script>
+      var year = document.getElementById('year');
+      var mon = document.getElementById('mon');
+      var day = document.getElementById('day');
+      var btn = document.getElementById('btn');
+      var years = document.getElementById('years');
+      var days = document.getElementById('days');
+
+      btn.onclick = function(){
+        if (isNaN(year.value) ||isNaN(mon.value) || isNaN(day.value)) {
+          alert("输入错误...")
+        }
+        var a = 0;
+        var date = 0;
+        var y = parseInt(year.value);
+        var m = parseInt(mon.value);
+        var d = parseInt(day.value);
+
+
+        if (y < 0 || m < 1 || m > 12 || d < 1 || d > 31) {
+          alert("输入错误......");
+          return;
+        }
+        if ((m === 4 || m === 6 || m === 9 || m === 11) && d > 30) {
+          alert("输入错误......");
+          return;
+
+        }
+        if (m === 2 && a === 0 && d > 28) {
+          alert("输入错误......");
+          return;
+
+        }
+        if (m === 2 && d > 29) {
+          alert("输入错误......");
+          return;
+
+        }
+        if ((y % 400 === 0) || (y % 4 === 0 && y % 100 != 0)){
+          a = 1;
+        }
+        switch (m) {
+          case 12:date += 30;
+          case 11:date += 31;
+          case 10:date += 30;
+          case 9:date += 31;
+          case 8:date += 31;
+          case 7:date += 30;
+          case 6:date += 31;
+          case 5:date += 30;
+          case 4:date += 31;
+          case 3:date = date + 28 + a;
+          case 2:date += 31;
+          case 1:date += d;
+        }
+
+        years.innerHTML = y;
+        days.innerHTML = date;
+      }
+    </script>
+  </body>
+</html>

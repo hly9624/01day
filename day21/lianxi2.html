@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <button id="btn">点击</button>
+    <script>
+    var btn = document.getElementById("btn");
+    btn.addEventListener('click', shanchu,false);
+    function shanchu(){
+      console.log("删除");
+      addEvent(btn,'click',shanchu);
+    }
+
+
+
+
+    function addEvent(elem,type,handler){
+
+      if (elem.addEventListener){
+        elem.removeEventListener(type, handler,false);
+      } else if (elem.attachEvent){
+        elem.datechEvent('on' + type, handler);
+      } else {
+        elem['on' + type] = null;
+      }
+    }
+    </script>
+  </body>
+</html>

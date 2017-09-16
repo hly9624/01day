@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>汽车</title>
+    <style>
+      *{
+        margin: 0;
+        padding:0;
+      }
+      .car {
+        width: 1000px;
+        height: 900px;
+        position: relative;
+      }
+      img {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        bottom:0;
+        animation-name: run;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      @keyframes run {
+        0% {
+          transform: translateX(100px) skew(30deg);
+
+        }
+        90% {
+          transform: translateX(1400px) skew(-45deg);
+        }
+        100% {
+          transform: translateX(1430px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="car">
+      <img src="./image/car.jpg" alt="">
+
+    </div>
+  </body>
+</html>

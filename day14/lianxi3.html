@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>滚动字幕</title>
+    <style>
+      *{
+        margin: 0;
+        padding:0;
+      }
+      .box {
+        width: 882px;
+        height: 86px;
+        border: 1px solid red;
+        margin: 100px auto;
+        overflow: hidden;
+      }
+      ul {
+        width: 1764px;
+        animation-name: run;
+        list-style: none;
+        animation-duration: 6s;
+        animation-timing-function:linear;
+        animation-iteration-count: infinite;
+      }
+      .box li {
+        float: left;
+
+      }
+
+      @keyframes run {
+        0%{
+          transform: translateX(0px);
+        }
+        100%{
+          transform: translateX(-882px);
+        }
+      }
+      .box:hover ul{
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li><img src="./image/1.jpg" alt=""></li>
+        <li><img src="./image/2.jpg" alt=""></li>
+        <li><img src="./image/3.jpg" alt=""></li>
+        <li><img src="./image/4.jpg" alt=""></li>
+        <li><img src="./image/5.jpg" alt=""></li>
+        <li><img src="./image/6.jpg" alt=""></li>
+        <li><img src="./image/7.jpg" alt=""></li>
+        <li><img src="./image/1.jpg" alt=""></li>
+        <li><img src="./image/2.jpg" alt=""></li>
+        <li><img src="./image/3.jpg" alt=""></li>
+        <li><img src="./image/4.jpg" alt=""></li>
+        <li><img src="./image/5.jpg" alt=""></li>
+        <li><img src="./image/6.jpg" alt=""></li>
+        <li><img src="./image/7.jpg" alt=""></li>
+      </ul>
+
+    </div>
+  </body>
+</html>

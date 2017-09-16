@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>检测</title>
+  </head>
+  <body>
+    <script>
+        var startx,starty,x,y;
+
+      document.addEventListener("touchstart",function(event){
+         startx = event.touches[0].clientX;
+         starty = event.touches[0].clientY;
+      },false);
+
+      document.addEventListener("touchend", function(event){
+         endx = event.changedTouches[0].clientX;
+         endy = event.changedTouches[0].clientY;
+        zhi();
+      },false);
+
+      function zhi(){
+         x =  endx - startx ;
+         y =  endy - starty;
+
+        if (Math.abs(x) > Math.abs(y)) {
+          if (x < 0){
+            alert("向左");
+          } else {
+            alert("向右");
+          };
+        } else {
+          if (y < 0){
+            alert("向上");
+          } else{
+            alert("向下");
+          }
+
+        }
+
+      }
+
+
+
+
+
+    </script>
+  </body>
+</html>

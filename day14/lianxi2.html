@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>波浪</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 1850px;
+        height: 970px;
+        background: rgb(127, 209, 235);
+        position: relative;
+      }
+      .bo {
+        position: absolute;
+        bottom: 0;
+        animation-name: bo_1;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
+      .lang {
+        position: absolute;
+        bottom: 0;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes bo_1 {
+        0% {
+          transform: translateY(30px);
+
+        }
+        50%{
+          transform: translateY(60px);
+
+        }
+        100%{
+          transform: translateY(30px);
+        }
+      }
+      @keyframes move {
+        0% {
+          transform: translateY(60px);
+
+        }
+        50%{
+          transform: translateY(30px);
+
+        }
+        100%{
+          transform: translateY(60px);
+        }
+      }
+      .tai{
+        width: 100px;
+        height: 100px;
+        border: 10px solid rgb(233, 225, 27);
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        border-radius: 50%;
+        animation-name: tai_yang;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+
+      }
+      .yang {
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        border-radius: 50%;
+        position: absolute;
+        top: 30px;
+        left: 40px;
+      }
+      @keyframes tai_yang {
+        0% {
+          opacity:0;
+        }
+        50% {
+          opacity:0.5;
+        }
+        100% {
+          opacity:0;
+        }
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="./image/1.png" alt="" class="bo">
+      <img src="./image/2.png" alt="" class="lang">
+      <div class="tai"></div>
+      <div class="yang"></div>
+
+    </div>
+  </body>
+</html>

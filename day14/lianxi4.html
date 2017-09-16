@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>心跳</title>
+    <style>
+      * {
+        margin: 0;
+        padding:0;
+      }
+      .box {
+        width: 800px;
+        height: 800px;
+        position: relative;
+        animation-name: tiao;
+        animation-duration: 0.8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+
+      }
+      .t1 {
+        width: 100px;
+        height: 100px;
+        background: rgb(223, 65, 136);
+        border-radius: 50%;
+        position: absolute;
+        top: 180px;
+        left: 150px;
+
+      }
+      .t2 {
+        width: 100px;
+        height: 100px;
+        background: rgb(223, 65, 136);
+        border-radius: 50%;
+        position: absolute;
+        top: 180px;
+        left: 220px;
+
+      }
+      .t3 {
+        width: 100px;
+        height: 100px;
+        background: rgb(223, 65, 136);
+        position: absolute;
+        top: 215px;
+        left: 186px;
+        transform: rotate(45deg);
+
+      }
+
+
+      @keyframes tiao {
+        0% {
+          transform: scale(0.9,0.9);   
+        }
+        100% {
+          transform: scale(1.1,1.1);
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="t1"></div>
+      <div class="t2"></div>
+      <div class="t3"></div>
+    </div>
+  </body>
+</html>

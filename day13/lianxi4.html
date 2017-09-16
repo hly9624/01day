@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>导航栏</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 100px;
+        height: 50px;
+        position: relative;
+        margin-left: 10px;
+        margin-top: 300px;
+        transform-style: preserve-3d;
+        transition: all 0.5s;
+        display: inline-block;
+      }
+
+      .box>div {
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        text-align: center;
+        position: absolute;
+      }
+      .before {
+        background: rgb(67, 179, 251);
+        transform: translateZ(25px);
+
+      }
+      .top {
+        background: rgb(140, 10, 250);
+        transform: translateZ(0px) rotateX(90deg);
+      }
+      .box:hover {
+        transform: rotate3d(1,0,0,-90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="before">导航一</div>
+      <div class="top">导航一</div>
+
+    </div>
+    <div class="box">
+      <div class="before">导航二</div>
+      <div class="top">导航二</div>
+
+    </div>
+    <div class="box">
+      <div class="before">导航三</div>
+      <div class="top">导航三</div>
+
+    </div>
+    <div class="box">
+      <div class="before">导航四</div>
+      <div class="top">导航四</div>
+
+    </div>
+    <div class="box">
+      <div class="before">导航五</div>
+      <div class="top">导航五</div>
+
+    </div>
+  </body>
+</html>

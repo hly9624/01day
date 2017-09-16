@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>星球</title>
+    <style>
+      * {
+        margin: 0;
+        padding:0;
+      }
+      body{
+        background: url("./image/bg.jpg")
+      }
+      .box {
+        position: relative;
+      }
+      .y1 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgb(231, 229, 29);
+        position: absolute;
+        top:420px;
+        left: 926px;
+        animation: zhou 5s linear infinite;
+      }
+      .y2 {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top:375px;
+        left: 874px;
+        animation: zhou 7s linear infinite;
+      }
+      .y3 {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top:335px;
+        left: 825px;
+        animation: zhou 4s linear infinite;
+      }
+      .y4 {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top:286px;
+        left: 772px;
+        background: url("./image/asteroids_meteorids.png") no-repeat 10px;
+        animation: zhou 7s linear infinite;
+      }
+      .y5 {
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top:236px;
+        left: 722px;
+        animation: zhou 9s linear infinite;
+      }
+      .y6 {
+        width: 550px;
+        height: 550px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top:189px;
+        left:672px;
+        animation: zhou 6s linear infinite;
+      }
+      .y7 {
+        width: 650px;
+        height: 650px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top:139px;
+        left: 619px;
+        animation: zhou 4s linear infinite;
+      }
+      .y8 {
+        width: 750px;
+        height: 750px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top:93px;
+        left: 563px;
+        animation: zhou 8s linear infinite;
+      }
+      .y9 {
+        width: 850px;
+        height: 850px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top:47px;
+        left: 512px;
+        animation: zhou 10s linear infinite;
+      }
+
+      @keyframes zhou {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .y2 span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        background: rgb(90, 189, 183);
+        top: 95px;
+
+      }
+      .y3 span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        background: rgb(7, 78, 91);
+        top: 85px;
+
+      }
+      .y4 span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        background:rgb(166, 94, 215);
+        top: 124px;
+
+      }
+      .y5 span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        background: rgb(114, 121, 24);
+        top: 167px;
+
+      }
+      .y6 span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        background: rgb(22, 64, 128);
+        top: 214px;
+
+      }
+      .y7 span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        background: rgb(192, 24, 207);
+        top: 257px;
+
+      }
+      .y8 span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        background: rgb(110, 201, 169);
+        top: 302px;
+
+      }
+      .y9 span{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        background: rgb(104, 195, 240);
+        top: 350px;
+
+      }
+
+
+
+
+
+ </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="y1"></div>
+      <div class="y2"><span></span></div>
+      <div class="y3"><span></span></div>
+      <div class="y4"><span></span></div>
+      <div class="y5"><span></span></div>
+      <div class="y6"><span></span></div>
+      <div class="y7"><span></span></div>
+      <div class="y8"><span></span></div>
+      <div class="y9"><span></span></div>
+
+    </div>
+  </body>
+</html>

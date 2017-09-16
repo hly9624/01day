@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>两拦布局方法一</title>
+    <style>
+      *{
+        margin: 0;
+        padding:0;
+      }
+
+      .box {
+        position: relative;
+      }
+      .one {
+        width: 200px;
+        height: 300px;
+        background: pink;
+        float: left;
+        left: 0;
+      }
+      .two {
+        height: 300px;
+        background: red;
+        position: absolute;
+        top:0;
+        left: 200px;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="one"></div>
+      <div class="two"></div>
+    </div>
+
+
+  </body>
+</html>
