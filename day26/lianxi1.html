@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        *{
+            padding:0px;
+            margin: 0px;
+        }
+        #box{
+            width: 220px;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background-color: orange;
+        }
+        #box #mylist{
+            position: absolute;
+            width: 220px;
+            left: 0px;
+            top: 0px;
+            list-style-type: none;
+        }
+        #box ul li{
+            float: left;
+        }
+        ul#underNum{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background-color: yellow;
+            width: 150px;
+            height: 30px;
+            list-style-type: none;
+        }
+        ul#underNum li{
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+
+        }
+        ul#underNum li a{
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <div id="box">
+            <ul id="mylist">
+                <li><a><img src="./img/01.jpg"></a></li>
+                <li><a><img src="./img/02.png"></a></li>
+                <li><a><img src="./img/03.png"></a></li>
+                <li><a><img src="./img/04.png"></a></li>
+                <li><a><img src="./img/05.jpg"></a></li>
+            </ul>
+            <ul id="underNum">
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            var timer=setInterval("hello()",2000);
+            var mylist=document.getElementById("mylist");
+            var num=document.getElementById("mylist").getElementsByTagName("li");
+            var now=0;
+            var left=0;
+            function hello(){
+                // body...
+                // document.write("ddd"+now);
+                if (left<=-(num.length-1)*490) {
+                    now=0;
+                    left=-now*490;
+                    mylist.style.left=left+"px";
+                    now=now+1;
+                }else{
+                    left=-now*490;
+                    mylist.style.left=left+"px";
+                    now=now+1;
+                };
+
+            }
+            //移动的位置
+            function toCover(now1){
+                now=now1;
+                left=-now*490;
+                mylist.style.left=left+"px";
+                clearInterval(timer);
+
+            }
+            var numli=document.getElementById("underNum").getElementsByTagName("li");
+            for (var i = 0; i <=numli.length - 1; i++) {
+                numli[i].index=i;
+                numli[i].onmouseover=function(){
+                    //alert(this.index);
+                    toCover(this.index);
+                };
+                numli[i].onmouseout=function(){
+                    //alert(this.index);
+                    timer=setInterval("hello()",1000);
+                };
+            };
+        </script>
+    </body>
+</html>

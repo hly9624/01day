@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // A~Z  65~90
+      // a~z  97~122
+
+      function dbx(str1) {
+        var str = "";
+        for (var i = 0; i < str1.length; i++) {
+          s = str1.charCodeAt(i);
+          if (((s >= 97) && (s <= 122)) || (s ==  32)) {
+            str += String.fromCharCode(s);
+          }else if ((s >= 65) && (s <= 90)) {
+            str += String.fromCharCode(s + 32);
+          }else{
+            console.log("输入正确的字符串");
+          }
+        }
+        return str;
+      };
+
+      function xbd(str2) {
+        var str = "";
+        for (var i = 0; i < str2.leng th; i++) {
+          s = str2.charCodeAt(i);
+          if ((s >= 97) && (s <= 122)) {
+            str += String.fromCharCode(s - 32);
+          }else if (((s >= 65) && (s <= 90)) || (s ==  32)) {
+            str += String.fromCharCode(s);
+          }else{
+            console.log("输入正确的字符串");
+          }
+        }
+        return str;
+      };
+
+      console.log(dbx("HELLO world"));
+      console.log(xbd("HELLO world"));
+
+
+      function hw(str3) {
+        return str3 === str3.split("").reverse().join("");
+      }
+      console.log(hw("helloworlddlrowolleh"));
+      console.log(hw("helloworlddlrowelleh"));
+      console.log(hw("12321"));
+    </script>
+  </body>
+</html>

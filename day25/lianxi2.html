@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>color</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #one{
+                width: 1000px;
+                height: 200px;
+                font-size: 100px;
+                line-height: 200px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="one"></div>
+
+        <script type="text/javascript">
+
+
+            var chars ="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789";
+            var maxlength = chars.length;
+            var c1 = Math.floor(Math.random() * maxlength);
+            var c2 = Math.floor(Math.random() * maxlength);
+            var c3 = Math.floor(Math.random() * maxlength);
+            var c4 = Math.floor(Math.random() * maxlength);
+            var c5 = Math.floor(Math.random() * maxlength);
+            var c6 = Math.floor(Math.random() * maxlength);
+            var v1 = chars[c1];
+            var v2 = chars[c2];
+            var v3 = chars[c3];
+            var v4 = chars[c4];
+            var v5 = chars[c5];
+            var v6 = chars[c6];
+            one.innerHTML = "验证码:" + v1 + " " + v2 + " " + v3 + " " + v4 + " " + v5 + " " + v6;
+
+
+        </script>
+    </body>
+</html>
